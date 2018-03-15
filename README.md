@@ -8,8 +8,6 @@ P2: Schroedinger’s equation for two electrons in a three-dimensional harmonic 
 
 P3: Building a model for the solar system using ordinary differ- ential equations
 
-P4: Studies of phase transitions in magnetic systems with Ising model
-
 P5: study of the numerical stability of three methods for diffusion equation & Temperature distribution in the lithosphere
 
 the following folders have the same content of the P folders but with some additional codes
