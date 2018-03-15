@@ -6,7 +6,7 @@ P1: solver of one-dimensional Poisson equation with Dirichlet boundary condition
 
 P2: Schroedinger’s equation for two electrons in a three-dimensional harmonic oscillator well
 
-P3: Building a model for the solar system using ordinary differ- ential equations
+P3: Building a model for the solar system using ordinary differential equations
 
 P5: study of the numerical stability of three methods for diffusion equation & Temperature distribution in the lithosphere
 
