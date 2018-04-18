@@ -26,12 +26,20 @@ int main()
     dat->open_file("test.txt");
 
     // loop over all the interested spatial step size
+<<<<<<< HEAD
     for(N=100; N<=100; N*=10){
+=======
+    for(N=1000; N<=1000; N*=10){
+>>>>>>> 1d184eeb16653cce57841c04082d42d2318dccf1
         // step size of the spatial coordinates
         double h = 1.0/N;
 
         // loop over all the interested temporal step size
+<<<<<<< HEAD
         for(dt = 1e-4; dt<=1e-4; dt*=5){
+=======
+        for(dt = 1e-3; dt<=1e-3; dt*=5){
+>>>>>>> 1d184eeb16653cce57841c04082d42d2318dccf1
 
             // summerize the information
             double alpha = dt/(h*h);
@@ -86,6 +94,7 @@ int main()
                 solver->two_dimension(u_2d, tolerance, cutoff);
                 solver->Solution2d( s_2d, time);
 
+<<<<<<< HEAD
                 for(int l=0; l<N+1; l++){
                     dat->write(I[l]);
                     dat->add_column();
@@ -95,6 +104,24 @@ int main()
             }
 
 
+=======
+            }
+
+            for(int l=0; l<N+1; l++){
+                dat->write(I[l]);
+                dat->add_column();
+
+            }
+            dat->new_row();
+
+            for(int l=0; l<N+1; l++){
+                dat->write(C[l]);
+                dat->add_column();
+
+            }
+
+            dat->new_row();
+>>>>>>> 1d184eeb16653cce57841c04082d42d2318dccf1
 
             delete[] I;
             delete[] s;

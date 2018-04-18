@@ -21,6 +21,7 @@ for ii = 1:10:1000
     pause(0.01)
     
 end
+<<<<<<< HEAD
 %%
 % analytical solution
 file = 'test.txt'
@@ -39,6 +40,8 @@ for ii = 1:1:1000
     
 end
 
+=======
+>>>>>>> 1d184eeb16653cce57841c04082d42d2318dccf1
 
 %% speranza 10
 file = 'espiazione_ritorno10.txt'
