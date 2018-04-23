@@ -57,17 +57,25 @@ int main()
     dat->open_file("temperature_mu");
     // ratio T/T_F
     long double ratio=0;
+    // energy
+    long double E =0;
     for(ratio=0.001; ratio<1.6; ratio=ratio+0.0001){
         for( mu=-2; mu<2; mu=mu+0.001){
 
             g=0;
+            E=0;
             //final integration
-            for(i=0;i<n;i++) g+=M[i]*f(X[i],mu,1/ratio);
+            for(i=0;i<n;i++){
+                g+=M[i]*f(X[i],mu,1/ratio);
+                E+=g*X[i] ;
+            }
 
             if(abs(g-0.666666)/(0.666666)<0.001){
                 dat->write(ratio);
                 dat->add_column();
                 dat->write(mu);
+                dat->add_column();
+                dat->write(E);
                 dat->new_row();
                 //dat->printscreen(g, "integral value ");
                 //dat->printscreen(abs(g-0.666666)/(0.666666), "relative error");
@@ -79,6 +87,8 @@ int main()
     }
     dat->close_file();
 
+
+    // heat capacity
 
     //g=g*(d-c)/2;
     cout<<"The Value of Integration is = "<<setprecision(10)<<g<<endl;
