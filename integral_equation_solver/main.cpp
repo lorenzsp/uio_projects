@@ -23,7 +23,7 @@ int main()
 {
     int n,i;
     double c,d;
-    n=18;
+    n=13;
     c=-1;
     d=1;
     /*
@@ -59,7 +59,7 @@ int main()
     long double ratio=0;
     // energy
     long double E =0;
-    for(ratio=0.001; ratio<1.6; ratio=ratio+0.0001){
+    for(ratio=0.0001; ratio<1.6; ratio=ratio+0.0001){
         for( mu=-2; mu<2; mu=mu+0.001){
 
             g=0;
@@ -67,15 +67,15 @@ int main()
             //final integration
             for(i=0;i<n;i++){
                 g+=M[i]*f(X[i],mu,1/ratio);
-                E+=g*X[i] ;
+                //E+=g*X[i] ;
             }
 
-            if(abs(g-0.666666)/(0.666666)<0.001){
+            if(abs(g-0.666667)/(0.666667)<0.001){
                 dat->write(ratio);
                 dat->add_column();
                 dat->write(mu);
                 dat->add_column();
-                dat->write(E);
+                //dat->write(E);
                 dat->new_row();
                 //dat->printscreen(g, "integral value ");
                 //dat->printscreen(abs(g-0.666666)/(0.666666), "relative error");
